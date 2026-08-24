@@ -14,7 +14,7 @@ export default function Home() {
         axios.get('https://dummyjson.com/products')
         .then((res)=>res.data)
         .then((finalRes=>{
-            // console.log(finalRes.products);
+             console.log(finalRes.products);
             setProduct(finalRes.products)
         }))
     }
@@ -63,7 +63,7 @@ function ProductCard({data}){
         }
         dispatch(addToCart( {cartObj} ));  // sending data to cart reducer where action to changing state is there
         toast.success("Item added into Cart")
-        //console.log(cartObj)
+        // console.log(cartObj)
     }
 
     let removeCart=()=>{
@@ -90,11 +90,11 @@ function ProductCard({data}){
         // toast.success("Item removed from Cart")
     }
     return(
-        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700">
   <div className="h-56 w-full">
     <a href="#">
       <img
-        className="mx-auto h-full dark:hidden"
+        className="mx-auto h-full"
         src={thumbnail}
         alt=""
       />
