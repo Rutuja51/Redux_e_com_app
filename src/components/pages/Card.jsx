@@ -155,13 +155,13 @@ function CartRow({cartObject}) {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, remove it!"
         }).then((result) => {
             if (result.isConfirmed) {
                 dispatch(deleteCart({ id }));
                 Swal.fire({
                     title: "Deleted!",
-                    text: "Your file has been deleted.",
+                    text: "Your product has been removed.",
                     icon: "success"
                 });
             }
