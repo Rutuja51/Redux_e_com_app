@@ -207,7 +207,7 @@ function ProductCard({data}){
     </div>
     <a
       href="#"
-      className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
+      className="text-lg font-semibold leading-tight text-gray-900 hover:underline"
     >
       {title}
     </a>
