@@ -31,7 +31,7 @@ export default function Home() {
             <section className="py-10 px-10 ">
                 <h1 className="text-3xl text-center font-bold mb-8">Our Products</h1>
 
-                <div className="max-w-[1320] mx-auto grid grid-cols-4 gap-5 mt-5">
+                <div className="mx-auto mt-5 grid max-w-[1320px] grid-cols-1 gap-4 px-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:px-0">
                 {
                     product.map((item,index)=>{
                         return <ProductCard data={item} key={index}></ProductCard>
@@ -90,7 +90,8 @@ function ProductCard({data}){
         // toast.success("Item removed from Cart")
     }
     return(
-        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700">
+        <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 dark:border-gray-700">
+
   <div className="h-56 w-full">
     <a href="#">
       <img
